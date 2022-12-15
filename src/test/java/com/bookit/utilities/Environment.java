@@ -23,8 +23,6 @@ public class Environment {
         Properties properties = null;
         String environment = System.getProperty("environment") != null ? environment = System.getProperty("environment") : ConfigurationReader.getProperty("environment");
 
-
-
         try {
 
             String path = System.getProperty("user.dir") + "/src/test/resources/Environments/" + environment + ".properties";
@@ -49,11 +47,5 @@ public class Environment {
         LEADER_EMAIL = properties.getProperty("team_leader_email");
         LEADER_PASSWORD = properties.getProperty("team_leader_password");
 
-
-
-
-
     }
-
-
 }
