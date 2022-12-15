@@ -32,7 +32,7 @@ public class BookitUtils {
 
         String token = given()
                 .queryParams(returnCredentials(role))
-                .when().get(ConfigurationReader.getProperty("base_url") + "/sign").prettyPeek().path("accessToken");
+                .when().get(ConfigurationReader.getProperty("base_url") + "/sign").path("accessToken");
 
         return "Bearer " + token;
 
